@@ -2,7 +2,7 @@
 
 When I was studying for the CompTIA exams (required by school), I found that there was quite a lot of tabular-type data to memorize. I became annoyed trying to adapt this to a vocabulary-type format for use in Quizlet, so I made this.
 
-The tables are drag-and-drop with the option to have checkbox columns for yes/no answers. Drag an answers to its proper cell and it will populate and turn green. Drag an answer to an incorrect cell and it will flash red and return to the answer bin at the bottom.
+The tables are drag-and-drop with the option to have checkbox columns for yes/no answers. Drag an answer to its proper cell and it will populate and turn green. Drag an answer to an incorrect cell and it will flash red and return to the answer bin at the bottom.
 
 ### Options
 These options can be useful depending on the type of data you're memorizing or your own individual study style.
@@ -32,7 +32,7 @@ Option&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&n
 ++++wide | Forces the table to be as wide as possible.
 ++++short | Reduces the height of the rows to fit more rows on the screen.
 ++++answer | Adds an answer to the answer bin.
-++++wrapcolumns:1,2,3... | By default, columns have wrapping turned off. Use this to specify a comma separated list of 0-indexed columns that should be allowed to wrap.
-++++checkboxcolumns:0,2,4... | Use this to specify a comma separated list of 0-indexed columns that should be checkboxes instead of drag-and-drop. Use 0 and 1 to represent Yes and No in your data tables.
+++++wrapcolumns:1,2,3... | By default, columns have wrapping turned off. Use this to specify a comma-separated list of 0-indexed columns that should be allowed to wrap.
+++++checkboxcolumns:0,2,4... | Use this to specify a comma-separated list of 0-indexed columns that should be checkboxes instead of drag-and-drop. Use 0 and 1 to represent Yes and No in your data tables.
 ----Comment Text | Adds this text under the table and before the answer bin. More than one comment is allowed.
         
