@@ -7,7 +7,7 @@ The tables are drag-and-drop with the option to have checkbox columns for yes/no
 ### Options
 These options can be useful depending on the type of data you're memorizing or your own individual study style.
 
-Option | Description
+Option&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | Description
 ------ | -----------
 Hide Used Values | By default, answers return to the bin regardless of whether they are correct. When this is checked, accurate answers will become hidden but not change the order of the bin.
 Delete Used Values | When checked, accurate answers will disappear from the answer bin. Answers in the bin will move around as accurate answers are placed in the table when this is checked.
@@ -26,24 +26,13 @@ I used tabs so that sections could be easily pasted from Excel.
 
 There are also a number of options that can be set for any section by including extra rows before the section data. These options are as follows and should be listed as they are found here:
 
-- **\*\*\*\*Subject Title**
-    - Used to specify the start of a new subject. Should be followed by an empty line.
-- **++++wide**
-  - Forces the table to be as wide as possible.
-- **++++short**
-    - Reduces the height of the rows to fit more rows on the screen.
-- **++++answer**
-    - Adds an answer to the answer bin.
-- **++++wrapcolumns:1,2,3...**
-    - By default, columns have wrapping turned off. Use this to specify a comma separated list of
-      0-indexed columns that should be allowed to wrap.
-- **++++checkboxcolumns:0,2,4...**
-    - Use this to specify a comma separated list of 0-indexed columns that should be checkboxes
-      instead of drag-and-drop. Use 0 and 1 to represent Yes and No in your data tables.
-- **++++checkboxcolumns:0,2,4...**
-    - Use this to specify a comma separated list of 0-indexed columns that should be checkboxes
-- **++++checkboxcolumns:0,2,4...**
-    - Use this to specify a comma separated list of 0-indexed columns that should be checkboxes
-- **----Comment Text**
-    - Will add the text under the table and before the answer bin. More than one comment is allowed.
+Option&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | Description
+--- | ---
+\*\*\*\*Subject Title | Used to specify the start of a new subject. Should be followed by an empty line.
+++++wide | Forces the table to be as wide as possible.
+++++short | Reduces the height of the rows to fit more rows on the screen.
+++++answer | Adds an answer to the answer bin.
+++++wrapcolumns:1,2,3... | By default, columns have wrapping turned off. Use this to specify a comma separated list of 0-indexed columns that should be allowed to wrap.
+++++checkboxcolumns:0,2,4... | Use this to specify a comma separated list of 0-indexed columns that should be checkboxes instead of drag-and-drop. Use 0 and 1 to represent Yes and No in your data tables.
+----Comment Text | Adds this text under the table and before the answer bin. More than one comment is allowed.
         
