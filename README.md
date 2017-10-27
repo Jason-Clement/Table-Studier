@@ -1,6 +1,6 @@
 # Table Studier
 
-When I was studying for the CompTIA exams (required by school), I found that there was quite a lot of tabular-type data to memorize. I became annoyed trying to adapt this to a vocabular-type format for use in Quizlet, so I made this.
+When I was studying for the CompTIA exams (required by school), I found that there was quite a lot of tabular-type data to memorize. I became annoyed trying to adapt this to a vocabulary-type format for use in Quizlet, so I made this.
 
 The tables are drag-and-drop with the option to have checkbox columns for yes/no answers. Drag an answers to its proper cell and it will populate and turn green. Drag an answer to an incorrect cell and it will flash red and return to the answer bin at the bottom.
 
