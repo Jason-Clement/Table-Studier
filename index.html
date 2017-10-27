@@ -1,0 +1,709 @@
+﻿<!DOCTYPE html>
+<html>
+    <head>
+        <title>Table Studying Thingy</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <div id="container">
+            <h1 class="ui-widget-header ui-state-default">CompTIA A+ 220-901</h1>
+            <div>
+                <div id="menu">
+                    <div id="subject-menu">
+                        <h3>Subject</h3>
+                        <div><ul></ul></div>
+                    </div>
+                    <div id="section-menu">
+                        <h3>Section</h3>
+                        <div><ul></ul></div>
+                    </div>
+                    <div>
+                        <h3>Options</h3>
+                        <div>
+                            <form>
+                                <input type="checkbox" id="hide-used-values"><label for="hide-used-values">Hide Used Values</label><br>
+                                <input type="checkbox" id="delete-used-values"><label for="delete-used-values">Delete Used Values</label><br>
+                                <input type="checkbox" id="shuffle-first-column"><label for="shuffle-first-column">Include First Column</label><br>
+                                <input type="checkbox" id="shuffle-row-order"><label for="shuffle-row-order">Shuffle Rows</label><br>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <div id="pane">
+                    <div id="content" class="ui-widget"></div>
+                    <div id="draggables" class="ui-widget"></div>
+                </div>
+            </div>
+        </div>
+        <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+        <script src="https://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
+        <script src="script.js"></script>
+        <div id="data">
+            ****CompTIA A+ 220-901
+
+            Motherboard Form Factors
+            Form Factor	Size	Metric Size
+            ATX	12" x 9.6"	305mm x 244mm
+            Micro-ATX	9.6" x 9.6"	244mm x 244mm
+            Mini-ITX	6.7" x 6.7"	170mm x 170mm
+            Nano-ITX	4.7" x 4.7"	120mm x 120mm
+            Pico-ITX	3.9" x 2.8"	100mm x 72mm
+            Mobile-ITX	2.4" x 2.4"	60mm x 60mm
+
+            ++++answer:PGA-ZIF
+            ++++answer:PGA
+            Intel Sockets
+            Socket	Type	Pins	Year	Supported CPUs
+            Socket T	LGA	775	2004	Pentium 4, Core 2
+            Socket B	LGA	1366	2008	Core i7 (Nehalem)
+            Socket H / H1	LGA	1156	2009	Core i3/5/7 (Nehalem)
+            Socket H2	LGA	1155	2011	Sandy/Ivy Bridge
+            Socket H3	LGA	1150	2013	Haswell, Broadwell
+            Socket R	LGA	2011	2011	Sandy/Ivy Bridge/Haswell-E/EP
+
+            ++++answer:LGA
+            ++++answer:PGA
+            AMD Sockets
+            Socket	Type	Pins	Year	Supported CPUs
+            AM3	PGA-ZIF	941	2009	Athlon II / Phenom II
+            AM3+	PGA-ZIF	942	2011	Athlon II / Phenom II
+            FM1	PGA-ZIF	905	2011	AMD 10h
+            FM2	Micro PGA-ZIF	904	2012	Piledriver
+            FM2+	PGA-ZIF	906	2014	Steamroller
+
+            RAM Types
+            Type	Pins	Notches	Voltage
+            SDR DIMM	168	2	3.3
+            DDR DIMM	184	1	2.5
+            DDR2 DIMM	240	1	1.8
+            DDR3 DIMM	240	1	1.5
+            DDR SO-DIMM	200	1	2.5
+            DDR2 SO-DIMM	204	1	1.8
+            DDR3 SO-DIMM	204	1	1.5
+            DDR Micro-DIMM	172	0	2.5
+            DDR2 Micro-DIMM	214	0	1.8
+            DDR3 Micro-DIMM	214	0	1.5
+
+            RAM Standard/Module
+            Standard	Module
+            200	1600
+            266	2100
+            333	2700
+            400	3200
+            533	4200
+            667	5300
+            800	6400
+            1066	8500
+            1333	10600
+            1600	12800
+            1866	14900
+            2133	17000
+
+            ++++answer:6.2ms
+            ++++answer:4.78ms
+            Hard Disk Latencies
+            Rotational Speed (RPM)	Average Latency
+            10,000	3 ms
+            7,200	4.16 ms
+            5,400	5.55 ms
+
+            ++++answer:Serial
+            ++++answer:Serial
+            ++++answer:Serial
+            ++++answer:Serial
+            PCI
+            Specification	Bus Type	Speed	Throughput
+            32-bit PCI	Parallel	33 MHz, 66MHz	133MB/s, 266 MB/s
+            64-bit PCI	Parallel	33 MHz, 66MHz	266 MB/s, 533 MB/s
+            PCI-X 1.0	Parallel	66 MHz, 133 MHz	533 MB/s, 1066 MB/s
+            PCI-X 2.0	Parallel	266 MHz, 533 MHz	2133 MB/s, 4266 MB/s
+
+            ++++answer:Parallel
+            ++++answer:Parallel
+            ++++answer:Parallel
+            ++++answer:Parallel
+            PCIe
+            Specification	Bus Type	x1 Throughput	x4 Throughput	x8 Throughput	x16 Throughput
+            PCIe 1.x	Serial	250 MB/s	 1 GB/s	 2 GB/s	 4 GB/s
+            PCIe 2.x	Serial	500 MB/s	 2 GB/s	 4 GB/s	 8 GB/s
+            PCIe 3.0	Serial	984.6 MB/s	 3.938 GB/s	 7.877 GB/s	 15.754 GB/s
+            PCIe 4.0	Serial	1.969 GB/s	 7.877 GB/s	 15.754 GB/s	 31.508 GB/s
+
+            ++++answer:3.3V, 12V
+            ++++answer:6
+            ++++answer:8
+            ++++answer:4, 6
+            ++++answer:6, 8
+            ++++answer:3.3V
+            ++++answer:5V
+            ++++answer:11
+            Power Connectors
+            Connector	Usage	Pins	Voltages
+            Molex	Case fans, IDE hard drives, optical drives	4	5V, 12V
+            SATA	Serial ATA hard drives and optical drives	15	3.3 V, 5 V, 12V
+            PCIe	PCI Express video cards	6, 8	12V
+
+            ++++short
+            Interface Speeds/Distances
+            Interface	AKA	Speed	Max Distance	Other Info
+            USB 1.0	Low Speed	1.5 Mb/s	3 meters	127 max ports
+            USB 1.1	Full Speed	12 Mb/s	5 meters	
+            USB 2.0		480 Mb/s	5 meters	
+            USB 3.0	SuperSpeed	5 Gb/s	3 meters	
+            IEEE 1394a	FireWire 400	400 Mb/s	4.5 meters	half-duplex, 63 max chain
+            IEEE 1394a Optical	FireWire 400	400 Mb/s	72 meters	half-duplex, 63 max chain
+            IEEE 1394b	FireWire 800	800 Mb/s	4.5 meters	full-duplex, 63 max chain
+            IEEE 1394b Optical	FireWire 800	800 Mb/s	100 meters	full-duplex, 63 max chain
+            Thunderbolt v1		20 Gbit/s	3 meters	10 Gbit/s per channel
+            Thunderbolt v2		20 Gbit/s	3 meters	
+            Thunderbolt v3		40 Gbit/s	3 meters	
+            Thunderbolt v1 Optical		20 Gbit/s	60 meters	10 Gbit/s per channel
+            Thunderbolt v2 Optical		20 Gbit/s	60 meters	
+            Thunderbolt v3 Optical		40 Gbit/s	60 meters	
+            IrDA	Infrared	4 Mb/s	1 meter	Requires line of sight
+            VGA	Video Graphics Array		10 meters	Analog only
+            DVI	Digital Visual Interface		N/A	Analog or Digital
+            SATA 1.0		1.5 Gb/s	1 meter	
+            SATA 2.0		3.0 Gb/s	1 meter	
+            SATA 3.0		6.0 Gb/s	1 meter	
+            eSATA 1.0		1.5 Gb/s	2 meters	
+            eSATA 2.0		3.0 Gb/s	2 meters	
+            eSATA 3.0		6.0 Gb/s	2 meters	
+
+            LCD TN/IPS Characteristics
+            Characteristic	TN	IPS
+            Cost	Less	More
+            Color accuracy	Less	More
+            Reaction to touch	More	Less
+            Viewing angle	Narrow	Wide
+            Power required	Less	More
+
+            Optical Disc Capacities
+            Format	Capacity
+            CD SS (includes recordable versions)	650MB, 700MB, 800MB, 900MB
+            DVD-R/RW SS, SL	4.7GB
+            DVD+R/RW SS, SL	4.7GB
+            DVD-R, DVD+R DS, SL	9.4GB
+            DVD-R SS, DL	8.5GB
+            DVD+R SS, DL	8.5GB
+            DVD+R DS, DL	17.1GB
+            BD-R/RE SS, SL	25GB
+            BD-R/RE SS, DL	50GB
+            BD-R/RE DS, DL	100GB
+            ----SS: single-sided; DS: double-sided; SL: single-layer; DL: dual-layer
+
+            RAID
+            RAID	Type	Minimum Disk Count	Failure Condition
+            RAID 0	Striping	2	Any drive failure breaks the array
+            RAID 1	Mirroring	2	All but one drive can be lost
+            RAID 5	Striping + Parity	3	Only one drive can be lost
+            RAID 10	Striping + Mirroring	4	Can lose all but one from each set of mirrors
+
+            ++++wide
+            ++++wrapcolumns:2
+            OSI Layers
+            Layer	Name	Description
+            7	Application	Responsible for providing network services-like file services, print services, and messaging services (not applications like word processing or spreadsheets, as the layer's name might lead you to believe).
+            6	Presentation	Responsible for the presentation of data (for example, the transition of character sets-e.g., ASCII to EBCDIC).
+            5	Session	Responsible for establishing and maintaining a communications "session".
+            4	Transport	Responsible for providing reliable end-to-end communications, including most of the error control and flow.
+            3	Network	Responsible for providing logical network addressing.  Some error and flow control is performed at this level.
+            2	Data Link	Responsible for logical topology and logical (MAC) addressing.  Individual network card addresses also function at this level.
+            1	Physical	Responsible for placing the network data on the wire, by changing binary data into electrical pulses on the physical medium.  The physical topology is defined at this level.
+
+            Subnet Masks
+            Dot-Decimal	CIDR	Binary
+            0.0.0.0	/0	00000000.00000000.00000000.00000000
+            255.0.0.0	/8	11111111.00000000.00000000.00000000
+            255.255.0.0	/16	11111111.11111111.00000000.00000000
+            255.255.255.0	/24	11111111.11111111.11111111.00000000
+            255.255.255.255	/32	11111111.11111111.11111111.11111111
+            128	/1	10000000
+            192	/2	11000000
+            224	/3	11100000
+            240	/4	11110000
+            248	/5	11111000
+            252	/6	11111100
+            254	/7	11111110
+
+            ++++answer:100 meters
+            ++++answer:200 meters
+            ++++answer:CSMA/CD
+            ++++answer:CSMA/CD
+            ++++answer:CSMA/CD
+            ++++answer:CSMA/CD
+            ++++answer:CSMA/CD
+            ++++answer:MIMO
+            ++++answer:MIMO
+            ++++answer:MU-MIMO
+            ++++answer:MU-MIMO
+            Wi-Fi Standards
+            Standard	Frequency	Maximum theoretical throughput (per stream)	Maximum allowable streams	Maximum theoretical throughput (total)	Approximate outdoor range	CSMA	MIMO
+            802.11a	5 GHz	54 Mbit/s	1	54 Mbit/s	120 meters	CSMA/CA	None
+            802.11b	2.4 GHz	11 Mbit/s	1	11 Mbit/s	140 meters	CSMA/CA	None
+            802.11g	2.4 GHz	54 Mbit/s	1	54 Mbit/s	140 meters	CSMA/CA	None
+            802.11n	5 GHz and/or 2.4 GHz	150 Mbit/s	4	600 Mbit/s	250 meters	CSMA/CA	MIMO
+            802.11ac	5 GHz	866.7 Mbit/s	8	6,934 Mbit/s	250 meters	CSMA/CA	MU-MIMO
+
+            ++++answer:200 meters
+            ++++answer:200 meters
+            ++++answer:10BASE-T
+            ++++answer:100BASE-TX
+            ++++answer:1000BASE-T
+            ++++answer:10GBASE-T
+            Ethernet Cable Categories
+            Cable Category	Ethernet Standard	Maximum Distance
+            Category 3	10BASE-T	100 meters
+            Category 5	100BASE-TX, 1000BASE-T	100 meters
+            Category 5e	100BASE-TX, 1000BASE-T	100 meters
+            Category 6	10GBASE-T	37 to 55 meters
+            Category 6a	10GBASE-T	100 meters
+            Category 7 (shielded)	10GBASE-T	100 meters
+
+            Common Network Protocols
+            Protocol	Port	Name	Description
+            DHCP	udp/67, udp/68	Dynamic Host Configuration Protocol	Automate the IP address configuration process
+            DNS	tcp/53, udp/53	Domain Name System	Convert domain names to IP addresses
+            LDAP	tcp/389, udp/389 	Lightweight Directory Access Protocol	Directory service protocol
+            SNMP	udp/161	Simple Network Management Protocol	Gather metrics and manage network devices
+            SMB	tcp/445	Server Message Block 	Windows file transfers and printer sharing
+            SSH	tcp/22	Secure Shell	Encrypted remote console login
+            AFP	tcp/548	Apple Filing Protocol	Mac OS file transfers
+            SLP	tcp/427, udp/427	Service Location Protocol	Find Mac OS services by name
+
+            ++++short
+            Common Network Ports
+            Protocol	Port
+            FTP	tcp/20, tcp/21
+            SSH	tcp/22
+            Telnet	tcp/23
+            SMTP	tcp/25
+            DNS	tcp/53, udp/53
+            HTTP	tcp/80
+            POP3	tcp/110
+            IMAP4	tcp/143
+            HTTPS	tcp/443
+            RDP	tcp/3389
+            NetBIOS-NS	udp/137
+            NetBIOS-DS	udp/138
+            NetBIOS-SS	tcp/139
+            SLP	tcp/427, udp/427
+            SMB	tcp/445
+            AFP	tcp/548
+
+            ++++short
+            Common Network Port Details
+            Protocol	Port	Name	Description
+            FTP	tcp/20, tcp/21	File Transfer Protocol	Sends and receives files between systems
+            SSH	tcp/22	Secure Shell	Encrypted console access
+            Telnet	tcp/23	Telecommunication Network	Insecure console access
+            SMTP	tcp/25	Simple Mail Transfer Protocol	Transfer email between mail servers
+            DNS	tcp/53, udp/53	Domain Name System	Convert domain names to IP addresses
+            HTTP	tcp/80	Hypertext Transfer Protocol	Web server communication
+            POP3	tcp/110	Post Oﬃce Protocol v3	Receive email into a email client
+            IMAP4	tcp/143	Internet Message Access Protocol v4	A newer email client protocol
+            HTTPS	tcp/443	Hypertext Transfer Protocol Secure	Web server communication with encryption
+            RDP	tcp/3389	Remote Desktop Protocol	Graphical display of remote devices
+            NetBIOS-NS	udp/137	NetBIOS name service	Register, remove, and find Windows services by name
+            NetBIOS-DS	udp/138	NetBIOS datagram service	Windows connection-less data transfer
+            NetBIOS-SS	tcp/139	NetBIOS session service	Windows connection-oriented data transfer
+            SLP	tcp/427, udp/427	Service Location Protocol	Find Mac OS services by name
+            SMB	tcp/445	Server Message Block	Windows file transfers and printer sharing
+            AFP	tcp/548	Apple Filing Protocol	Mac OS file transfers
+
+            ++++checkboxcolumns:1,2,3,4,5
+            PC Configurations
+            PC	Processor	Video	RAM	Storage	Audio	Notes
+            Graphics/CAD/CAM	1	1	1	0	0	Maximum RAM
+            Audio/Video Editing	0	1	0	1	0	Fast storage, dual monitor
+            Virtualization	1	0	1	0	0	Maximum CPU and RAM
+            Gaming	1	1	0	0	1	High-end cooling
+            Home Theater	0	1	0	0	1	HDMI, surround sound, TV tuner
+            Thick Client	0	0	0	0	0	Recommended Windows requirements
+            Thin Client	0	0	0	0	0	Basic applications
+
+            ++++wrapcolumns:2,3
+            ++++wide
+            Laser Printing Process
+            Step	Name	Components	Description
+            Step 1	Processing	PC, Printer Processor, Printer Memory	Build the entire page in memory
+            Step 2	Charging	EP Drum, Corona Wire	Prepare the drum with a negative electrostatic charge of around -600VDC
+            Step 3	Exposing	Laser, EP Drum, Mirror	Write the image with the laser by reducing the charge to around -100VDC where it should print
+            Step 4	Developing	Toner, EP Drum, Developing Roller	Add toner to the charged areas of the imaging drum
+            Step 5	Transferring	Transfer Corona Wire, EP Drum, Static-Eliminator Strip	Move the toner from the drum to the paper by applying a positive charge (+600VDC) to the paper
+            Step 6	Fusing	Fusing Roller, Pressure Roller	Heat and pressure fuse the toner to the paper
+            Step 7	Cleaning	EP Drum, Cleaning Blade	Remove excess toner by scraping it away from the drum
+
+            ++++wrapcolumns:0,1
+            ++++wide
+            PC Tools
+            Tool	Description
+            Antistatic Strap	Protects from electrostatic discharge
+            Demagnetized Phillips Head Screwdriver	For assembling/disassembling PCs
+            Multimeter	For testing wires in a PC as well as AC outlets
+            Power Supply Tester	For testing a PC's power supply
+            Torx Screwdriver	For assembling/disassembling PCs that use the less common Torx screw
+            Hex Screwdriver	For cases and other components that do not use Phillips screws
+            Plastic Tweezer	For grabbing screws that fall into difficult-to-reach areas and for removing jumper shunts
+            Compressed Air	For cleaning dust from a PC
+            Penlight	Helps to illuminate when working inside the computer case and when making connections on the back of a PC when working in dark conditions
+            Magnifying Glass	Helps to read small writing on components and locate damage to circuits or chips
+
+            ++++wrapcolumns:0,1
+            ++++wide
+            Networking Tools
+            Tool	Description
+            Loopback Plug	Useful for testing physical ports by looping the transmission signal back into the reception signal
+            Cable Tester	For performing continuity tests and can often detect missing pins or crossed wires
+            Punch-Down Tool	Used to punch a wire into a wiring block like a 66 Block or a 110 Block, can often trim excess wire while punching
+            Toner Probe	Used to trace a cable between endpoints by putting an analog sound on the wire
+            Wire Stripper	Used to remove insulation around the wires in a cable
+            Cable Crimper	Used to pinch the connector onto a cable
+            Wireless Locator	Used to identify wireless networks, can be either a hardware device or a just a software app that runs on a different device
+            Post Card	Sometimes built-in to the motherboard, can also be an external tool to be plugged in to various ports, provides detailed diagnostics during POST
+
+            ****CompTIA A+ 220-902
+
+            Windows System Requirements
+            O/S	Processor	Memory	Hard Drive / Free Space	Disk Requirements	Video
+            Vista Home Basic	800 MHz	512 MB	20 GB / 15 GB	DVD-ROM	32 MB Video RAM
+            All Other Vista	1 GHz	1 GB	40 GB / 15 GB	DVD-ROM	128 MB Video RAM
+            Windows 7 (x86)	1 GHz	1 GB	16 GB		DirectX 9 w/ WDDM 1.0
+            Windows 7 (x64)	1 GHz	2 GB	20 GB		DirectX 9 w/ WDDM 1.0
+            Windows 8 (x86)	1 GHz + PAE, NX, SSE2	1 GB	16 GB		DirectX 9 w/ WDDM
+            Windows 8 (x64)	1 GHz + PAE, NX, SSE2	2 GB	20 GB		DirectX 9 w/ WDDM
+			
+            ++++checkboxcolumns:1,2,3,4,5
+            Windows Vista Features
+            O/S	Aero	Media Center	Domain Member	EFS	BitLocker	Maximum x86 RAM	Maximum x64 RAM
+            Home Basic	0	0	0	0	0	4 GB	8 GB
+            Home Premium	1	1	0	0	0	4 GB	16 GB
+            Business	1	0	1	1	0	4 GB	128 GB
+            Enterprise	1	0	1	1	1	4 GB	128 GB
+            Ultimate	1	1	1	1	1	4 GB	128 GB
+            
+            ++++checkboxcolumns:1,2,3,4,5,6
+            Windows 7 Features
+            Edition	DVD Playback	Aero	ICS	Domain Member	EFS	BitLocker	Maximum x86 RAM	Maximum x64 RAM
+            Starter	0	0	0	0	0	0	2 GB	
+            Home Premium	1	1	1	0	0	0	4 GB	16 GB
+            Professional	1	1	1	1	1	0	4 GB	192 GB
+            Enterprise	1	1	1	1	1	1	4 GB	192 GB
+            Ultimate	1	1	1	1	1	1	4 GB	192 GB
+
+            ++++checkboxcolumns:1,2,3,4,5,6
+            Windows 8 Features
+            Edition	Windows Media Player	EFS	BitLocker	Domain Member	AppLocker	BranchCache	Maximum x86 RAM	Maximum x64 RAM
+            Core	1	0	0	0	0	0	4 GB	128 GB
+            Pro	1	1	1	1	0	0	4 GB	512 GB
+            Enterprise	1	1	1	1	1	1	4 GB	512 GB
+            
+            ++++checkboxcolumns:1,2,3,4
+            Windows Vista Upgrade Paths
+            Base O/S	Home Basic	Home Premium	Business	Ultimate
+            XP Home	1	1	1	1
+            XP Pro	0	0	1	1
+            XP Media Center	0	1	0	1
+            
+            ++++checkboxcolumns:1,2,3,4,5,6
+            Windows 7 Upgrade Paths
+            Base O/S	Starter	Home Basic	Home Premium	Professional	Ultimate	Enterprise
+            XP - All Editions	0	0	0	0	0	0
+            Vista Home Basic	0	1	1	0	1	0
+            Vista Home Premium	0	0	1	0	1	0
+            Vista Business	0	0	0	1	1	1
+            Vista Ultimate	0	0	0	0	1	0
+            Vista Enterprise	0	0	0	0	0	1
+
+            ++++checkboxcolumns:1,2,3
+            Windows 8 Upgrade Paths
+            Base O/S	Core	Pro	Enterprise
+            XP - All Editions	0	0	0
+            Vista - All Editions	0	0	0
+            7 Starter	1	1	0
+            7 Home Basic	1	1	0
+            7 Home Premium	1	1	0
+            7 Professional	0	1	1
+            7 Ultimate	0	1	0
+            7 Enterprise	0	0	1
+
+            ****CompTIA Network+ N10-006
+
+            OSI Model
+            Layer	Name	Function	Examples
+            7	Application	Support for applications	HTTP, FTP, SMTP (email)
+            6	Presentation	Protocol conversion, data translation	ASCII, JPEG
+            5	Session	Establishes, manages, and terminates sessions	NFS, SQL
+            4	Transport	Ensures error-free packets	TCP, UDP
+            3	Network	Provides routing decisions	IP, IPX
+            2	Data link	Provides for the flow of data	MAC addresses
+            1	Physical	Signals and media	NICs, twisted-pair cable, fiber
+			
+            ++++wrapcolumns:3
+            ++++wide
+            Ethernet Frame Structure
+            Sequence	Part	Length	Description
+            1	Preamble	7 octets	An alternating pattern of 1s and 0s used for synchronization.
+            2	Start frame delimiter	1 octet	A binary 8-bit sequence of 1 0 1 0 1 0 1 1 that indicates the start of the frame.
+            3	Destination MAC address	6 octets	Each computer has an Ethernet network interface card (NIC) or network adapter that has a unique media access control.
+            4	Source MAC address	6 octets	MAC address associated with it. The MAC address is 6 bytes (12 hex characters) in length.
+            5	Length/type	2 octets	An indication of the number of bytes in the data field if this value is less than 1500. If this number is greater than 1500, it indicates the type of data format—for example, IP and IPX.
+            6	Data	46 - 1500 octets	The variable length of data being transferred from the source to the destination.
+            7	Pad		A field used to bring the total number of bytes up to the minimum of 46 if the data field is less than 46 bytes.
+            8	Frame check sequence	4 octets	A 4-byte CRC value used for error detection. The CRC is performed on the bits from the destination MAC address through the Pad fields. If an error is detected, the frame is discarded.
+            9	Interpacket gap	12+ octets	After a packet has been sent, transmitters are required to transmit a minimum of 96 bits (12 octets) of idle line state before transmitting the next packet.
+
+            IP Address Classes
+            Class	Description	Example IP Numbers	Maximum Number of Hosts	Address Range
+            Class A	Governments, very large networks	44.x.x.x.	224-2=16,777,214	0.0.0.0 to 127.255.255.255
+            Class B	Midsize companies, universities, and so on	128.123.x.x	216-2=65,534	128.0.0.0 to 191.255.255.255
+            Class C	Small networks	192.168.1.x	28-2=254	192.0.0.0 to 223.255.255.255
+            Class D	Reserved for multicast groups	224.x.x.x	not applicable	224.0.0.0 to 239.255.255.255
+
+            ++++short
+            Ethernet Standards
+            Ethernet Standard	Media Type	Bandwidth Capacity	Distance Limitation
+            10BASE5	Coax (thicknet)	10 Mbps	500 m
+            10BASE2	Coax (thinnet)	10 Mbps	185 m
+            10BASE-T	Cat 3 (or higher) UTP	10 Mbps	100 m
+            100BASE-TX	Cat 5 (or higher) UTP	100 Mbps	100 m
+            100BASE-FX	MMF	100 Mbps	2 km
+            1000BASE-T	Cat 5e (or higher) UTP	1 Gbps	100 m
+            1000BASE-TX	Cat 6 (or higher) UTP	1 Gbps	100 m
+            1000BASE-LX	MMF/SMF	1 Gbps/1 Gbps	5 km
+            1000BASE-LH	SMF	1 Gbps	10 km
+            1000BASE-ZX	SMF	1 Gbps	70 km
+            10GBASE-SR	MMF	10 Gbps	26-400 m
+            10GBASE-LR	SMF	10 Gbps	10 km
+            10GBASE-ER	SMF	10 Gbps	40 km
+            10GBASE-SW	MMF	10 Gbps	300 m
+            10GBASE-LW	SMF	10 Gbps	10 km
+            10GBASE-EW	SMF	10 Gbps	40 km
+            10GBASE-T	Cat 6a (or higher)	10 Gbps	100 m
+            100GBASE-SR10	MMF	100 Gbps	125 m
+            100GBASE-LR4	SMF	100 Gbps	10 km
+            100GBASE-ER4	SMF	100 Gbps	40 km
+            
+            ++++wrapcolumns:1,2
+            ++++wide
+            Twisted-pair Cable Categories
+            Category	Description	Bandwidth/Data Rate
+            Category 3 (CAT3)	Telephone installations Class C	Up to 16Mbps
+            Category 5 (CAT5)	Computer networks Class D	Up to 100MHz/100Mbps 100-m length
+            Enhanced CAT5 (CAT5e)	Computer networks	100MHz/1000Mbps applications with improved noise performance in a full duplex mode
+            Category 6 (CAT6)	Higher-speed computer	Up to 250MHz networks Class E/1000Mbps, supports 10Gbps but at distances fewer than 100 meters
+            Category 6a (CAT6a)	Increased bandwidth	Up to 500MHz networks Class Ea/10Gbps
+            Category 7 (CAT7)	International Organization for Standardization (ISO) standard, not an EIA/TIA standard	Up to 600MHz speed computer networks Class F/10Gbps
+            Category 7a (CAT7a)	ISO standard, not an EIA/TIA standard	Up to 1000MHz speed computer networks Class FA/10Gbps
+            
+            EIA/TIA568B Wire Color Maps and Pin-Outs
+            Pin	T568A Wire Color	T568B Wire Color	10/100 Mbps Signal	1/10 Gbps Signal
+            1	White-Green	White-Orange	TX+	BI_DA+
+            2	Green	Orange	TX-	BI_DA-
+            3	White-Orange	White-Green	RX+	BI_DB+
+            4	Blue	Blue		BI_DB-
+            5	White-Blue	White-Blue		BI_DC+
+            6	Orange	Green	RX-	BI_DC-
+            7	White-Brown	White-Brown		BI_DD+
+            8	Brown	Brown		BI_DD-
+
+            ++++short
+            Channel Specifications
+            Parameter	Category 5e	Category 6	Category 6A	Category 7/7A
+            Class	Class D	Class E	Class EA	Class F/FA
+            Bandwidth	100MHz	250MHz	500MHz	600MHz/1000MHz
+            Insertion Loss (dB)	24	21.3	20.9	20.8/20.3
+            NEXT Loss (dB)	30.1	30.9	39.9	62.9/65.0
+            PSNEXT Loss (dB)	27.1	37.1	37.1	59.9/62.0
+            ACR (dB)	6.1	18.6	18.6	42.1/46.1
+            PSACR (dB)	3.1	15.8	15.8	39.1/41.7
+            ACRF1 (ELFEXT) (dB)	17.4	23.3	23.3	44.4/47.4
+            PSACRF2 (PSELFEXT) (dB)	14.4	20.3	20.3	41.1/44.4
+            Return Loss (dB)	10	12	12	12.0.12.0
+            * PANEXT Loss (dB)	n/s	n/s	60	n/s / 67.0
+            * PSAACRF (dB)	n/s	n/s	37	n/s / 52.0
+            * TCL (dB)	n/s	n/s	20.3	20.3/20.3
+            *ELTCTL (dB)	n/s	n/s	0.5	0/0
+            Propagation Delay (ns)	548	548	548	548/548
+            Delay Skew (ns)	50	50	50	30/30
+
+            ++++short
+            Common Network Ports
+            Protocol	Port
+            FTP	tcp/20, tcp/21
+            SSH	tcp/22
+            Telnet	tcp/23
+            SMTP	tcp/25
+            DNS	tcp/53, udp/53
+            HTTP	tcp/80
+            POP3	tcp/110
+            IMAP4	tcp/143
+            HTTPS	tcp/443
+            RDP	tcp/3389
+            NetBIOS-NS	udp/137
+            NetBIOS-DS	udp/138
+            NetBIOS-SS	tcp/139
+            SLP	tcp/427, udp/427
+            SMB	tcp/445
+            AFP	tcp/548
+
+            ++++short
+            Common Network Port Details
+            Protocol	Port	Name	Description
+            FTP	tcp/20, tcp/21	File Transfer Protocol	Sends and receives files between systems
+            SSH	tcp/22	Secure Shell	Encrypted console access
+            Telnet	tcp/23	Telecommunication Network	Insecure console access
+            SMTP	tcp/25	Simple Mail Transfer Protocol	Transfer email between mail servers
+            DNS	tcp/53, udp/53	Domain Name System	Convert domain names to IP addresses
+            HTTP	tcp/80	Hypertext Transfer Protocol	Web server communication
+            POP3	tcp/110	Post Oﬃce Protocol v3	Receive email into a email client
+            IMAP4	tcp/143	Internet Message Access Protocol v4	A newer email client protocol
+            HTTPS	tcp/443	Hypertext Transfer Protocol Secure	Web server communication with encryption
+            RDP	tcp/3389	Remote Desktop Protocol	Graphical display of remote devices
+            NetBIOS-NS	udp/137	NetBIOS name service	Register, remove, and find Windows services by name
+            NetBIOS-DS	udp/138	NetBIOS datagram service	Windows connection-less data transfer
+            NetBIOS-SS	tcp/139	NetBIOS session service	Windows connection-oriented data transfer
+            SLP	tcp/427, udp/427	Service Location Protocol	Find Mac OS services by name
+            SMB	tcp/445	Server Message Block	Windows file transfers and printer sharing
+            AFP	tcp/548	Apple Filing Protocol	Mac OS file transfers
+
+            ++++answer:100 meters
+            ++++answer:200 meters
+            ++++answer:CSMA/CD
+            ++++answer:CSMA/CD
+            ++++answer:CSMA/CD
+            ++++answer:CSMA/CD
+            ++++answer:CSMA/CD
+            ++++answer:MIMO
+            ++++answer:MIMO
+            ++++answer:MU-MIMO
+            ++++answer:MU-MIMO
+            Wi-Fi Standards
+            Standard	Frequency	Maximum theoretical throughput (per stream)	Maximum allowable streams	Maximum theoretical throughput (total)	Approximate outdoor range	CSMA	MIMO
+            802.11a	5 GHz	54 Mbit/s	1	54 Mbit/s	120 meters	CSMA/CA	None
+            802.11b	2.4 GHz	11 Mbit/s	1	11 Mbit/s	140 meters	CSMA/CA	None
+            802.11g	2.4 GHz	54 Mbit/s	1	54 Mbit/s	140 meters	CSMA/CA	None
+            802.11n	5 GHz and/or 2.4 GHz	150 Mbit/s	4	600 Mbit/s	250 meters	CSMA/CA	MIMO
+            802.11ac	5 GHz	866.7 Mbit/s	8	6,934 Mbit/s	250 meters	CSMA/CA	MU-MIMO
+            
+            ****CompTIA Security+ SY0-401
+            
+            Hash Algorithms
+            Hash	Name	Bits	Notes
+            MD5	Message Digest Algorithm	128	Vulnerable to collisions
+            SHA-1	Secure Hash Algorithm	160	Vulnerable to collisions
+            SHA-2	Secure Hash Algorithm	Up to 512	Widely used
+            RIPEMD	RACE Integrity Primitives Evaluation Message Digest	160, 256, 320	Based on MD4
+            HMAC	Hash-based Message Authentication Code	Varies	Combines a hash with a secret key
+            
+            Symmetric Encryption Ciphers					
+            Cipher	Name	Type	Block Size (bits)	Key Size (bits)	Notes
+            RC4	Ron's Code 4	Stream		40-2048	
+            DES	Data Encryption Standard	Block	64	56	Considered insecure
+            3DES	Triple Data Encryption Standard	Block	64	168	Uses DES three times
+            AES	Advanced Encryption Standard	Block	128	128, 192, 256	Used in WPA2, federal government standard
+            Blowfish		Block	64	32-448	No patent, public domain
+            Twofish		Block	128	128, 192, 256	Successor to Blowfish
+            
+            Fire Extinguisher Classes
+            Class	Fights	Examples
+            A	Common Combustibles	Wood, Cloth, Trash
+            B	Flammable Liquids	Gasoline, Oil
+            C	Electrical Fires	Data Centers
+            D	Heavy Metal Fires	Industrial Applications
+            K	Kitchen Fires	Fats, Oils
+
+            ++++answer:100 meters
+            ++++answer:200 meters
+            ++++answer:CSMA/CD
+            ++++answer:CSMA/CD
+            ++++answer:CSMA/CD
+            ++++answer:CSMA/CD
+            ++++answer:CSMA/CD
+            ++++answer:MIMO
+            ++++answer:MIMO
+            ++++answer:MU-MIMO
+            ++++answer:MU-MIMO
+            Wi-Fi Standards
+            Standard	Frequency	Maximum theoretical throughput (per stream)	Maximum allowable streams	Maximum theoretical throughput (total)	Approximate outdoor range	CSMA	MIMO
+            802.11a	5 GHz	54 Mbit/s	1	54 Mbit/s	120 meters	CSMA/CA	None
+            802.11b	2.4 GHz	11 Mbit/s	1	11 Mbit/s	140 meters	CSMA/CA	None
+            802.11g	2.4 GHz	54 Mbit/s	1	54 Mbit/s	140 meters	CSMA/CA	None
+            802.11n	5 GHz and/or 2.4 GHz	150 Mbit/s	4	600 Mbit/s	250 meters	CSMA/CA	MIMO
+            802.11ac	5 GHz	866.7 Mbit/s	8	6,934 Mbit/s	250 meters	CSMA/CA	MU-MIMO
+            
+            ++++short
+            Common Network Ports
+            Protocol	Port
+            FTP	tcp/20, tcp/21
+            SSH	tcp/22
+            Telnet	tcp/23
+            SMTP	tcp/25
+            TACACS+	tcp/49, udp/49
+            DNS	tcp/53, udp/53
+            DHCP	udp/67, udp/68
+            TFTP	udp/69
+            HTTP	tcp/80
+            Kerberos	tcp/88, udp/88
+            POP3	tcp/110
+            NTP	UDP/123
+            NetBIOS-NS	udp/137
+            NetBIOS-DS	udp/138
+            NetBIOS-SS	tcp/139
+            IMAP4	tcp/143
+            SNMP	tcp/161, udp/161
+            SNMP Traps	tcp/162, udp/162
+            BGP	tcp/179
+            LDAP	tcp/389, udp/389
+            SLP	tcp/427, udp/427
+            HTTPS	tcp/443
+            SMB	tcp/445
+            ISAKMP/IKE	udp/500
+            AFP	tcp/548
+            LDAPS	TCP/636, UDP/636
+            FTPS	TCP/989, TCP/990
+            RDP	tcp/3389
+            
+            RAID
+            RAID	Type	Minimum Disk Count	Failure Condition
+            RAID 0	Striping	2	Any drive failure breaks the array
+            RAID 1	Mirroring	2	All but one drive can be lost
+            RAID 5	Striping + Parity	3	Only one drive can be lost
+            RAID 10	Striping + Mirroring	4	Can lose all but one from each set of mirrors
+            
+            ++++answer:Operational
+            ++++answer:Management
+            ++++answer:Management
+            ++++answer:Management
+            ++++answer:Management
+            ++++answer:Technical
+            ++++answer:Technical
+            ++++answer:Technical
+            Security Control Types
+            Control	Type
+            Personnel Security	Operational
+            Vulnerability Assessment	Management
+            Media Protection	Operational
+            Program Management	Management
+            Training	Operational
+            Risk Assessment	Management
+            Antivirus	Technical
+            Encryption	Technical
+            Intrusion Detection	Technical
+            Configuration Management	Operational
+            Maintenance	Operational
+            Physical Protection	Operational
+            Mantrap	Operational
+            Access Control	Technical
+            Firewall	Technical
+            Penetration Test	Management
+            Audit and Accountability	Technical
+            Change Management	Operational
+            Planning	Management
+
+        </div>
+    </body>
+</html>

@@ -1,0 +1,141 @@
+body {
+    font-family: "Trebuchet MS", "Helvetica", "Arial", "Verdana", "sans-serif";
+    font-size: 62.5%;
+    margin: 0;
+}
+
+#menu {
+    width: 250px;
+    float: left;
+}
+
+#container {
+    width: 1%;
+    display: table;
+    margin: auto;
+}
+
+h1 {
+    padding: 0.7em;
+}
+
+#pane {
+    margin-left: 270px;
+    display: table;
+    width: 1%;
+}
+
+tr.alt-row, tr.alt-row td.correct {
+    background: #f1f1f1;
+}
+
+#content {
+    min-width: 400px;
+}
+
+#content, #draggables {
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+    #content h2 {
+        text-align: left;
+        padding: 0.4em;
+        margin-top: 0;
+    }
+
+    #draggables span {
+        margin: 0px 10px 10px 0px;
+        padding: .75em 1em .75em 1em;
+        display: inline-block;
+        cursor: pointer;
+        background: rgba(255, 255, 255, 0.5) !important;
+        white-space: nowrap;
+    }
+
+table {
+    border-spacing: 0;
+    border-collapse: collapse;
+    max-width: 900px;
+}
+
+span.additional-answer {
+    display: none;
+    visibility: hidden;
+}
+
+table.wide {
+    width: 900px;
+}
+
+table.short td, #draggables span.short {
+    padding: 0.4em 1em 0.4em 1em;
+}
+
+.wrap {
+    white-space: normal !important;
+}
+
+span.wrap {
+    max-width: 200px;
+}
+
+td, th {
+    text-align: center;
+    padding: .75em 1em .75em 1em;
+}
+
+td {
+    white-space: nowrap;
+}
+
+    td.correct {
+        color: #119911 !important;
+    }
+
+    td.column-head {
+        background: transparent !important;
+    }
+
+.hidden-text {
+    background: transparent;
+    color: transparent !important;
+}
+
+#data {
+    display: none;
+    visibility: hidden;
+}
+
+#menu ul {
+    margin: 0;
+    padding: 0;
+}
+
+#menu li {
+    list-style-type: none;
+    padding: .2em;
+    cursor: pointer;
+}
+
+    #menu li.ui-state-active {
+        border-color: transparent !important;
+    }
+
+td img {
+    margin: 0 2px 0 2px;
+    opacity: 0.35;
+}
+
+    td img:hover {
+        opacity: 1;
+    }
+
+td.correct img {
+    opacity: 1;
+}
+
+td.checkbox {
+    padding: 0px 8px 0 8px;
+    min-width: 50px;
+}
