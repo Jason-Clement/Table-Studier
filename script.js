@@ -278,6 +278,10 @@ $(function () {
     $("#section-menu li").hide();
     $("#section-menu .s1").show();
     $("#menu > div").accordion({ header: "h3", collapsible: true });
+    $("#info-header").click(function () {
+        $("#info").toggle(250);
+    });
+    
     activeSection = $("#content div:first").attr("id");
     shuffle(activeSection);
 });

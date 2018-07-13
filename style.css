@@ -4,6 +4,11 @@ body {
     margin: 0;
 }
 
+.hidden {
+    display: none;
+    visibility: hidden;
+}
+
 #menu {
     width: 250px;
     float: left;
@@ -17,6 +22,72 @@ body {
 
 h1 {
     padding: 0.7em;
+}
+
+#info-header {
+    position: relative;
+    height: 0;
+    top: -32px;
+    right: 6px;
+    text-align: right;
+    vertical-align: middle;
+}
+
+#info-header a {
+    background: url(info.png) no-repeat right center;
+    padding: 4px 20px 4px 4px;
+    font-size: 115%;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+#info-header a:link,
+#info-header a:visited {
+    color: #0376dc;
+}
+
+#info-header a:hover {
+    background-color: rgba(0, 0, 0, 0.25)
+}
+
+#info {
+    display: none;
+    font-size: 130%;
+    margin-bottom: 32px;
+}
+
+#info h2 {
+    clear: both;
+    margin: 32px 0 16px 0;
+}
+
+#info h2:first-child  {
+    margin-top: 16px;
+}
+
+#info p {
+    padding-left: 10px;
+    clear: both;
+}
+
+dl {
+    padding-left: 10px;
+    width: 100%;
+}
+
+dd, dt {
+    padding: 6px 0;
+}
+
+dt {
+    font-weight: bold;
+    float: left;
+    width: 25%;
+    clear: left;
+}
+
+dd {
+    margin-left: 25%;
 }
 
 #pane {
@@ -38,20 +109,20 @@ tr.alt-row, tr.alt-row td.correct {
     text-align: center;
 }
 
-    #content h2 {
-        text-align: left;
-        padding: 0.4em;
-        margin-top: 0;
-    }
+#content h2 {
+    text-align: left;
+    padding: 0.4em;
+    margin-top: 0;
+}
 
-    #draggables span {
-        margin: 0px 10px 10px 0px;
-        padding: .75em 1em .75em 1em;
-        display: inline-block;
-        cursor: pointer;
-        background: rgba(255, 255, 255, 0.5) !important;
-        white-space: nowrap;
-    }
+#draggables span {
+    margin: 0px 10px 10px 0px;
+    padding: .75em 1em .75em 1em;
+    display: inline-block;
+    cursor: pointer;
+    background: rgba(255, 255, 255, 0.5) !important;
+    white-space: nowrap;
+}
 
 table {
     border-spacing: 0;
@@ -89,13 +160,13 @@ td {
     white-space: nowrap;
 }
 
-    td.correct {
-        color: #119911 !important;
-    }
+td.correct {
+    color: #119911 !important;
+}
 
-    td.column-head {
-        background: transparent !important;
-    }
+td.column-head {
+    background: transparent !important;
+}
 
 .hidden-text {
     background: transparent;
@@ -118,18 +189,18 @@ td {
     cursor: pointer;
 }
 
-    #menu li.ui-state-active {
-        border-color: transparent !important;
-    }
+#menu li.ui-state-active {
+    border-color: transparent !important;
+}
 
 td img {
     margin: 0 2px 0 2px;
     opacity: 0.35;
 }
 
-    td img:hover {
-        opacity: 1;
-    }
+td img:hover {
+    opacity: 1;
+}
 
 td.correct img {
     opacity: 1;
