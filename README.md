@@ -33,6 +33,6 @@ Option&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&n
 ++++short | Reduces the height of the rows to fit more rows on the screen.
 ++++answer | Adds an answer to the answer bin.
 ++++wrapcolumns:1,2,3... | By default, columns have wrapping turned off. Use this to specify a comma-separated list of 0-indexed columns that should be allowed to wrap.
-++++checkboxcolumns:0,2,4... | Use this to specify a comma-separated list of 0-indexed columns that should be checkboxes instead of drag-and-drop. Use 0 and 1 to represent Yes and No in your data tables.
+++++checkboxcolumns:0,2,4... | Use this to specify a comma-separated list of 0-indexed columns that should be checkboxes instead of drag-and-drop. Use 1 to represent Yes and 0 to represent No in your data tables.
 ----Comment Text | Adds this text under the table and before the answer bin. More than one comment is allowed.
         
