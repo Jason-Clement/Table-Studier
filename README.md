@@ -4,6 +4,8 @@ When I was studying for the CompTIA exams (required by school), I found that the
 
 The tables are drag-and-drop with the option to have checkbox columns for yes/no answers. Drag an answer to its proper cell and it will populate and turn green. Drag an answer to an incorrect cell and it will flash red and return to the answer bin at the bottom.
 
+A live version can be found [here](http://jasonclement.me/table-studying-thingy/).
+
 ### Options
 These options can be useful depending on the type of data you're memorizing or your own individual study style.
 
