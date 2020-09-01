@@ -1,5 +1,7 @@
 # Table Studier
 
+I didn't initially plan on publishing this thing. This was essentially a weekend fun project wherein I gave absolutely no regard to best practices or even writing clean code. However, it's become somewhat popular so I put the code up for anybody to use.
+
 When I was studying for the CompTIA exams (required by school), I found that there was quite a lot of tabular-type data to memorize. I became annoyed trying to adapt this to a vocabulary-type format for use in Quizlet, so I made this.
 
 The tables are drag-and-drop with the option to have checkbox columns for yes/no answers. Drag an answer to its proper cell and it will populate and turn green. Drag an answer to an incorrect cell and it will flash red and return to the answer bin at the bottom.
